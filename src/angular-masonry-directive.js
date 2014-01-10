@@ -1,4 +1,10 @@
-(function() {
+(function(generator) {
+    if(typeof define === 'function' && define.amd) {
+        define(['masonry'], generator);
+    } else {
+        generator(Masonry);
+    }
+})(function(Masonry) {
     "use strict";
 
     angular.module('masonry', ['ng']).directive('masonry', function($parse) {
@@ -29,4 +35,4 @@
             }
         };
     });
-})();
+});
