@@ -24,7 +24,7 @@
         return {
             restrict: 'AC',
             link: function(scope, elem) {
-                var master = elem.parent('*[mansory]:first').scope();
+                var master = elem.parent('*[masonry]:first').scope();
                 var mansory = master.obj;
 
                 elem.ready(function() {
